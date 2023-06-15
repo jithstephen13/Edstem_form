@@ -9,7 +9,7 @@ Email}) => {
 
     const navigate=useNavigate()
   return (
-    <div style={{display:"flex", flexDirection:"column", border:"1px solid black",backgroundColor:`${Math.floor(Math.random() * 16)}`}} onClick={()=> navigate(`/single/${id}`)}
+    <div style={{display:"flex", flexDirection:"column", border:"1px solid black",backgroundColor:`hsla(${Math.random() * 360}, 100%, 50%, 1)`}} onClick={()=> navigate(`/single/${id}`)}
     >
  <p>{Name}</p>
  <p>{Education}</p> 

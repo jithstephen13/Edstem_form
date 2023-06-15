@@ -11,7 +11,7 @@ export const Home = () => {
     Education:"",
     skill:[],
     Gender:"",
-    PhoneNumber:0,
+    PhoneNumber:"+123456789",
     Email:""
    })
 
@@ -64,9 +64,9 @@ console.log(details)
         
         <form action=""  style={{display:"flex",flexDirection:"column", width:"40%",margin:"auto",border:"1px solid black", padding:"30px"}} onSubmit={handileSubmit}>
              
-             <input type="text" placeholder='Name' value={data.Name} name='Name' onChange={handleFormChange} />
+             <input type="text" placeholder='Name' value={data.Name} name='Name' onChange={handleFormChange}  required/>
 
-             <select name='Education' onChange={handleFormChange} >
+             <select name='Education' onChange={handleFormChange}  required >
                 <option value="">select Education </option>
                 <option value="+2">+2</option>
                 <option value="Graduate">Graduate </option>
@@ -91,10 +91,10 @@ console.log(details)
                </div>
 
                <div>
-                      <input type="text" placeholder='PhoneNumber' value={data.PhoneNumber} name="PhoneNumber" onChange={handleFormChange}  />
+                      <input type="text" placeholder='PhoneNumber' value={data.PhoneNumber} name="PhoneNumber"  required onChange={handleFormChange}  />
                </div>
                <div>
-                      <input type="email" placeholder='Email' name="Email" value={data.Email} onChange={handleFormChange}  />
+                      <input type="email" placeholder='Email' name="Email" value={data.Email} onChange={handleFormChange}  required />
                </div>
 
               <button type="submit">Submit</button>
